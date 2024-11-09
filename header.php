@@ -259,10 +259,10 @@ switch ($routes) {
                         </svg>
                     </a>
                     <ul class="c-header_nav js-header-nav txt3">
-                        <li class="c-header_link"><a href="#about" data-scroll-to>About</a></li>
-                        <li class="c-header_link"><a href="#overview" data-scroll-to>Overview</a></li>
-                        <li class="c-header_link"><a href="#news" data-scroll-to>News</a></li>
-                        <li class="c-header_link"><a href="#contact" data-scroll-to>Contact</a></li>
+                        <li class="c-header_link"><a href="#about" data-scrollto="about" data-scroll-to>About</a></li>
+                        <li class="c-header_link"><a href="#grants" data-scrollto="grants" data-scroll-to>Grants</a></li>
+                        <li class="c-header_link"><a href="#news" data-scrollto="news" data-scroll-to>News</a></li>
+                        <li class="c-header_link"><a href="#contact" data-scrollto="contact" data-scroll-to>Contact</a></li>
                         <li class="c-header_lang sp-only">
                             <?php echo do_shortcode('[bogo]'); ?>
                         </li>
@@ -394,7 +394,7 @@ switch ($routes) {
                     </a>
                     <ul class="c-header_nav js-header-nav txt3">
                         <li class="c-header_link"><a href="<?= home_url(); ?>/#about" data-scroll-to>About</a></li>
-                        <li class="c-header_link"><a href="<?= home_url(); ?>/#overview" data-scroll-to>Overview</a></li>
+                        <li class="c-header_link"><a href="<?= home_url(); ?>/#grants" data-scroll-to>Grants</a></li>
                         <li class="c-header_link"><a href="<?= home_url(); ?>/news/">News</a></li>
                         <li class="c-header_link"><a href="<?= home_url(); ?>/#contact" data-scroll-to>Contact</a></li>
                         <li class="c-header_lang sp-only">

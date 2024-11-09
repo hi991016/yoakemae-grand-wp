@@ -142,6 +142,35 @@
     }
   }
 
+  // ===== grants =====
+  .grant {
+    &_container {
+      padding-top: 300px;
+    }
+
+    &_inner {
+      padding: 0 25px;
+    }
+
+    &_figure {
+      display: block;
+      z-index: 1;
+      position: relative;
+      height: 100%;
+      padding-bottom: calc(695 / 1390 * 100%);
+      background-color: #ccc;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
   // ===== about =====
   .about {
     &_container {

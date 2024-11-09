@@ -45,8 +45,23 @@
             </section>
             <!-- //top -->
 
+            <!-- grants// -->
+            <section class="grant js-sections js-offset-top" id="grants">
+                <div class="grant_container">
+                    <div class="grant_inner">
+                        <figure class="grant_figure">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/home/#" alt="#01 Finalists" draggable="false" loading="lazy" width="1440" height="779">
+                        </figure>
+                        <div class="fgrant_content">
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //grand -->
+
             <!-- about// -->
-            <section class="about js-sections js-offset-top" id="about">
+            <section class="about js-sections" id="about">
                 <div class="about_container">
                     <div class="about_wrapper">
                         <div class="about_content">
