@@ -193,80 +193,53 @@ const home = () => {
   });
 
   // scroll active link
-  // const scrollSections = gsap.utils.toArray(".js-sections");
+  const scrollSections = gsap.utils.toArray(".js-sections");
   // const links = gsap.utils.toArray(".js-header-nav li a");
-
-  // scrollSections.forEach((section, i) => {
-  //   const link = links[i];
-  //   ScrollTrigger.create({
-  // scroller: scrollEl,
-  // trigger: section,
-  // start: "top 50%",
-  // end: "bottom 50%",
-  // onEnter: () => link.classList.add("active"),
-  // onEnterBack: () => link.classList.add("active"),
-  // onLeave: () => link.classList.remove("active"),
-  // onLeaveBack: () => link.classList.remove("active"),
-  //     // markers: true,
-  //   });
+  scrollSections.forEach((section, i) => {
+    // const link = links[i];
+    const sectionId = section.getAttribute("id");
+    ScrollTrigger.create({
+      scroller: scrollEl,
+      trigger: section,
+      start: "top 50%",
+      end: "bottom 50%",
+      onEnter: () =>
+        document
+          .querySelector(`[data-scrollto="${sectionId}"]`)
+          .classList.add("active"),
+      onEnterBack: () =>
+        document
+          .querySelector(`[data-scrollto="${sectionId}"]`)
+          .classList.add("active"),
+      onLeave: () =>
+        document
+          .querySelector(`[data-scrollto="${sectionId}"]`)
+          .classList.remove("active"),
+      onLeaveBack: () =>
+        document
+          .querySelector(`[data-scrollto="${sectionId}"]`)
+          .classList.remove("active"),
+      // markers: true,
+    });
+  });
+  // ScrollTrigger.create({
+  //   scroller: scrollEl,
+  //   trigger: "#overview",
+  //   start: "top 50%",
+  //   end: "bottom 50%",
+  //   onEnter: () =>
+  //     document.querySelector(`[data-scrollto="about"]`).classList.add("active"),
+  //   onEnterBack: () =>
+  //     document.querySelector(`[data-scrollto="about"]`).classList.add("active"),
+  //   onLeave: () =>
+  //     document
+  //       .querySelector(`[data-scrollto="about"]`)
+  //       .classList.remove("active"),
+  //   onLeaveBack: () =>
+  //     document
+  //       .querySelector(`[data-scrollto="about"]`)
+  //       .classList.remove("active"),
   // });
-
-  const grantsSectionLink = document.querySelector(`[data-scrollto="grants"]`);
-  const aboutSectionLink = document.querySelector(`[data-scrollto="about"]`);
-  const newsSectionLink = document.querySelector(`[data-scrollto="news"]`);
-  const contactSectionLink = document.querySelector(
-    `[data-scrollto="contact"]`
-  );
-  ScrollTrigger.create({
-    scroller: scrollEl,
-    trigger: "#grants",
-    start: "top 50%",
-    end: "bottom 50%",
-    onEnter: () => grantsSectionLink.classList.add("active"),
-    onEnterBack: () => grantsSectionLink.classList.add("active"),
-    onLeave: () => grantsSectionLink.classList.remove("active"),
-    onLeaveBack: () => grantsSectionLink.classList.remove("active"),
-  });
-  ScrollTrigger.create({
-    scroller: scrollEl,
-    trigger: "#news",
-    start: "top 50%",
-    end: "bottom 50%",
-    onEnter: () => newsSectionLink.classList.add("active"),
-    onEnterBack: () => newsSectionLink.classList.add("active"),
-    onLeave: () => newsSectionLink.classList.remove("active"),
-    onLeaveBack: () => newsSectionLink.classList.remove("active"),
-  });
-  ScrollTrigger.create({
-    scroller: scrollEl,
-    trigger: "#about",
-    start: "top 50%",
-    end: "bottom 50%",
-    onEnter: () => aboutSectionLink.classList.add("active"),
-    onEnterBack: () => aboutSectionLink.classList.add("active"),
-    onLeave: () => aboutSectionLink.classList.remove("active"),
-    onLeaveBack: () => aboutSectionLink.classList.remove("active"),
-  });
-  ScrollTrigger.create({
-    scroller: scrollEl,
-    trigger: "#overview",
-    start: "top 50%",
-    end: "bottom 50%",
-    onEnter: () => aboutSectionLink.classList.add("active"),
-    onEnterBack: () => aboutSectionLink.classList.add("active"),
-    onLeave: () => aboutSectionLink.classList.remove("active"),
-    onLeaveBack: () => aboutSectionLink.classList.remove("active"),
-  });
-  ScrollTrigger.create({
-    scroller: scrollEl,
-    trigger: "#contact",
-    start: "top 50%",
-    end: "bottom 50%",
-    onEnter: () => contactSectionLink.classList.add("active"),
-    onEnterBack: () => contactSectionLink.classList.add("active"),
-    onLeave: () => contactSectionLink.classList.remove("active"),
-    onLeaveBack: () => contactSectionLink.classList.remove("active"),
-  });
 
   // scroll envent
   const footerSetTop = $(".js-footer").offset().top,

@@ -48,13 +48,19 @@
             <!-- grants// -->
             <section class="grant js-sections js-offset-top" id="grants">
                 <div class="grant_container">
-                    <div class="grant_inner">
-                        <figure class="grant_figure">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/home/#" alt="#01 Finalists" draggable="false" loading="lazy" width="1440" height="779">
-                        </figure>
-                        <div class="fgrant_content">
-                                
-                        </div>
+                    <div class="grant_list">
+                        <a href="<?= home_url(); ?>/grants/01/" class="grant_items">
+                            <figure class="grant_figure">
+                                <img src="<?= get_template_directory_uri() ?>/assets/img/home/#" alt="#01 Finalists" draggable="false" loading="lazy" width="1440" height="779">
+                            </figure>
+                            <div class="grant_content">
+                                <h2>#01 Finalists</h2>
+                                <p>
+                                    Yuri Uenishi, Shinya Fukuda, Hiroyasu Yamauchi, <br />
+                                    Risaku Suzuki, Anri Samata, Kimi Himeno
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -130,7 +136,7 @@
             <!-- //about -->
 
             <!-- overview// -->
-            <section class="overview js-sections" id="overview">
+            <section class="overview" id="overview">
                 <div class="overview_container l-container">
                     <div class="overview_element js-element js-is-blur" data-scroll data-scroll-speed="2">
                         <figure>
